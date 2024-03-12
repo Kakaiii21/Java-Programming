@@ -1,0 +1,465 @@
+package calculator;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class CalculatorFrame extends JFrame {
+
+
+		
+		JFrame frame = new JFrame();
+		
+		JLabel scrn1 = new JLabel();
+		JLabel scrn2 = new JLabel();
+		JLabel scrn3 = new JLabel();
+
+
+		JButton b0 = new JButton();
+		JButton b1 = new JButton();
+		JButton b2 = new JButton();
+		JButton b3 = new JButton();
+		JButton b4 = new JButton();
+		JButton b5 = new JButton();
+		JButton b6 = new JButton();
+		JButton b7 = new JButton();
+		JButton b8 = new JButton();
+		JButton b9 = new JButton();
+
+		JButton ba = new JButton();
+		JButton bs = new JButton();
+		JButton bd = new JButton();
+		JButton bm = new JButton();
+		JButton be = new JButton();
+		JButton bp = new JButton();
+
+
+		
+	CalculatorFrame(){
+		
+		Image IconImage = new ImageIcon("calculator.png").getImage();
+		this.setIconImage(IconImage);
+	
+		this.add(scrn1);
+		this.add(scrn2);
+		this.add(scrn3);
+
+		
+		
+		this.add(b0);
+		this.add(b1);
+		this.add(b2);
+		this.add(b3);
+		this.add(b4);
+		this.add(b5);
+		this.add(b6);
+		this.add(b7);
+		this.add(b8);
+		this.add(b9);
+
+		this.add(ba);
+		this.add(bs);
+		this.add(bd);
+		this.add(bm);
+		this.add(be);
+		this.add(bp);
+
+
+///////////////////////-------> Screen of the Calculator <---------///////////////////////
+		
+//////-----------> Big Screen
+		
+		scrn1.setBorder(BorderFactory.createLineBorder(Color.black));
+		scrn1.setBounds(40,30,400,100);
+		scrn1.setHorizontalAlignment(JLabel.RIGHT);
+		scrn1.setFont(new Font("Tohama" ,Font.BOLD,50));
+//////-----------> Small Screen
+
+		scrn2.setBorder(BorderFactory.createLineBorder(Color.black));
+		scrn2.setBounds(40,30,100,50);
+		scrn2.setFont(new Font("Tohama" ,Font.BOLD,50));
+		
+//////-----------> Operator Screen
+
+			scrn3.setBorder(BorderFactory.createLineBorder(Color.black));
+			scrn3.setBounds(80,30,100,50);
+			scrn3.setFont(new Font("Tohama" ,Font.BOLD,50));
+
+
+			
+///////////////////////-------> Buttons of the Calculator <---------///////////////////////
+
+		
+//////-----------> Button 7
+		
+	b7.setBounds(40,150,80,80);
+	b7.setFocusable(false);
+	b7.setLayout(null);
+	b7.setBackground(Color.decode("#d9dbf1"));
+	b7.setOpaque(true);
+	b7.setBorder(null);
+	b7.setText("7");
+	b7.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	b7.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + "7");
+		}
+		
+	});
+		
+//////-----------> Button 4
+	
+	b4.setBounds(40,250,80,80);
+	b4.setFocusable(false);
+	b4.setLayout(null);
+	b4.setBackground(Color.decode("#d9dbf1"));
+	b4.setOpaque(true);
+	b4.setBorder(null);
+	b4.setText("4");
+	b4.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	b4.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + "4");
+
+		}
+		
+		
+	});
+	
+//////-----------> Button 1
+	
+	b1.setBounds(40,350,80,80);
+	b1.setFocusable(false);
+	b1.setLayout(null);
+	b1.setBackground(Color.decode("#d9dbf1"));
+	b1.setOpaque(true);
+	b1.setBorder(null);
+	b1.setText("1");
+	b1.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	b1.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + "1");
+
+		}
+		
+		
+	});
+	
+//////-----------> Button 0
+	
+	b0.setBounds(40,450,80,80);
+	b0.setFocusable(false);
+	b0.setLayout(null);
+	b0.setBackground(Color.decode("#d9dbf1"));
+	b0.setOpaque(true);
+	b0.setBorder(null);
+	b0.setText("0");
+	b0.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	b0.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + "0");
+
+		}
+		
+		
+	});
+	
+//////-----------> Button 8
+	b8.setBounds(150,150,80,80);
+	b8.setFocusable(false);
+	b8.setLayout(null);
+	b8.setBackground(Color.decode("#d9dbf1"));
+	b8.setOpaque(true);
+	b8.setBorder(null);
+	b8.setText("8");
+	b8.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	b8.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + "8");
+
+		}
+		
+		
+	});
+	
+	
+//////-----------> Button 5
+	b5.setBounds(150,250,80,80);
+	b5.setFocusable(false);
+	b5.setLayout(null);
+	b5.setBackground(Color.decode("#d9dbf1"));
+	b5.setOpaque(true);
+	b5.setBorder(null);
+	b5.setText("5");
+	b5.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	b5.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + "5");
+
+		}
+		
+		
+	});
+	
+//////-----------> Button 2
+	
+	b2.setBounds(150,350,80,80);
+	b2.setFocusable(false);
+	b2.setLayout(null);
+	b2.setBackground(Color.decode("#d9dbf1"));
+	b2.setOpaque(true);
+	b2.setBorder(null);
+	b2.setText("2");
+	b2.setFont(new Font("Tahoma" , Font.BOLD , 50));	
+	b2.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + "2");
+
+		}
+		
+		
+	});
+	
+//////-----------> Button Period
+	
+	bp.setBounds(150,450,80,80);
+	bp.setFocusable(false);
+	bp.setLayout(null);
+	bp.setBackground(Color.decode("#d9dbf1"));
+	bp.setOpaque(true);
+	bp.setBorder(null);
+	bp.setText(".");
+	bp.setFont(new Font("Tahoma" , Font.BOLD , 50));	
+	bp.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + ".");
+
+		}
+		
+		
+	});
+	
+//////-----------> Button 9
+	
+	b9.setBounds(260,150,80,80);
+	b9.setFocusable(false);
+	b9.setLayout(null);
+	b9.setBackground(Color.decode("#d9dbf1"));
+	b9.setOpaque(true);
+	b9.setBorder(null);
+	b9.setText("9");
+	b9.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	b9.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + "9");
+
+		}
+		
+		
+	});
+	
+//////-----------> Button 6
+	
+	b6.setBounds(260,250,80,80);
+	b6.setFocusable(false);
+	b6.setLayout(null);
+	b6.setBackground(Color.decode("#d9dbf1"));
+	b6.setOpaque(true);
+	b6.setBorder(null);
+	b6.setText("6");
+	b6.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	b6.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + "6");
+
+		}
+		
+		
+	});
+	
+//////-----------> Button 3
+	
+	b3.setBounds(260,350,80,80);
+	b3.setFocusable(false);
+	b3.setLayout(null);
+	b3.setBackground(Color.decode("#d9dbf1"));
+	b3.setOpaque(true);
+	b3.setBorder(null);
+	b3.setText("3");
+	b3.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	
+	b3.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn1.setText(scrn1.getText() + "3");
+
+		}
+		
+		
+	});
+//////-----------> Button Subtraction
+	
+	bs.setBounds(260,450,80,80);
+	bs.setFocusable(false);
+	bs.setLayout(null);
+	bs.setBackground(Color.decode("#d9dbf1"));
+	bs.setOpaque(true);
+	bs.setBorder(null);
+	bs.setText("-");
+	bs.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	bs.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+            scrn2.setText(scrn1.getText());
+            scrn3.setText("-");
+            scrn1.setText("");
+
+		}
+		
+		
+	});
+//////-----------> Button Addition
+	
+	ba.setBounds(370,150,80,80);
+	ba.setFocusable(false);
+	ba.setLayout(null);
+	ba.setBackground(Color.decode("#d9dbf1"));
+	ba.setOpaque(true);
+	ba.setBorder(null);
+	ba.setText("+");
+	ba.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	ba.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+			   scrn2.setText(scrn1.getText() + "+");
+	            scrn1.setText("");
+		}
+		
+		
+	});
+
+	
+//////-----------> Button Division
+	
+	bd.setBounds(370,250,80,80);
+	bd.setFocusable(false);
+	bd.setLayout(null);
+	bd.setBackground(Color.decode("#d9dbf1"));
+	bd.setOpaque(true);
+	bd.setBorder(null);
+	bd.setText("/");
+	bd.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	bd.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+			   scrn2.setText(scrn1.getText() + "/");
+	            scrn1.setText("");
+		}
+		
+		
+	});
+//////-----------> Button Multiplication
+	
+	bm.setBounds(370,350,80,80);
+	bm.setFocusable(false);
+	bm.setLayout(null);
+	bm.setBackground(Color.decode("#d9dbf1"));
+	bm.setOpaque(true);
+	bm.setBorder(null);
+	bm.setText("*");
+	bm.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	bm.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+			   scrn2.setText(scrn1.getText() + "*");
+	            scrn1.setText("");
+
+		}
+		
+		
+	});
+//////-----------> Button Equal Sign
+	
+	be.setBounds(370,450,80,80);
+	be.setFocusable(false);
+	be.setLayout(null);
+	be.setBackground(Color.decode("#d9dbf1"));
+	be.setOpaque(true);
+	be.setBorder(null);
+	be.setText("=");
+	be.setFont(new Font("Tahoma" , Font.BOLD , 50));
+	be.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+			int num1 = Integer.parseInt(scrn1.getText());
+			int num2 = Integer.parseInt(scrn2.getText());
+			
+			int add, sub, div, mult;
+			
+			
+			
+
+		}
+		
+		
+	});
+		
+		
+		this.getContentPane().setBackground(Color.decode("#eccbd9"));
+		this.setSize(500,600);
+		this.setLayout(null);
+		this.setLocationRelativeTo(null);
+		this.setResizable(false);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setVisible(true);
+		
+		
+	}
+	
+}
